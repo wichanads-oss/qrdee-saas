@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>QR Order</title>
+  <!--
+    GitHub Pages SPA Routing Fix
+    เมื่อ refresh หน้า /kitchen หรือ /admin
+    GitHub Pages จะ 404 เพราะไม่มีไฟล์จริง
+    script นี้จะ redirect กลับ index.html พร้อม path เดิม
+  -->
+  <script>
+    var l = window.location;
+    var base = "/qr-order"; // 🔧 เปลี่ยนเป็นชื่อ repo ของคุณ
+    l.replace(
+      l.protocol + "//" + l.hostname +
+      (l.port ? ":" + l.port : "") +
+      base + "/?p=" +
+      encodeURIComponent(
+        l.pathname.replace(base, "") + l.search
+      ) + (l.hash ? "&h=" + encodeURIComponent(l.hash) : "")
+    );
+  </script>
+</head>
+<body></body>
+</html>
