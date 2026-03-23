@@ -12,7 +12,7 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/qr-order/",   // 🔧 เปลี่ยนเป็นชื่อ repo ของคุณ
+  base: "/qrdee-saas/",// 🔧 เปลี่ยนเป็นชื่อ repo ของคุณ
   build: {
     outDir: "dist",
     rollupOptions: {

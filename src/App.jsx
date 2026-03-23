@@ -6,7 +6,7 @@
 //   /kitchen       → KitchenPage    (ต้อง login: kitchen | admin)
 //   /admin         → AdminPage      (ต้อง login: admin เท่านั้น)
 // ============================================================
-import { AuthProvider } from "./hooks/useAuth";
+import { AuthProvider } from "./hooks/useAuth.jsx";
 import ProtectedRoute   from "./components/ProtectedRoute";
 import CustomerPage     from "./pages/CustomerPage";
 import KitchenPage      from "./pages/KitchenPage";
