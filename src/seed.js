@@ -3,7 +3,18 @@
 // รัน script นี้ครั้งเดียวเพื่อสร้างข้อมูลตัวอย่างใน Firestore
 // คำสั่ง: node src/seed.js
 // ============================================================
-import { db } from "./firebase.js";
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+
+const app = initializeApp({
+  apiKey: "AIzaSyDai6UfZuvfiCh9TStZbhIl8q5GACNjJ5A",
+  authDomain: "qrdee-saas.firebaseapp.com",
+  projectId: "qrdee-saas",
+  storageBucket: "qrdee-saas.firebasestorage.app",
+  messagingSenderId: "749457873101",
+  appId: "1:749457873101:web:67ba60a3270d8cb8963184"
+});
+const db = getFirestore(app);
 import { collection, doc, setDoc, writeBatch } from "firebase/firestore";
 
 // ── Firestore Collections Schema ──────────────────────────
